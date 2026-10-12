@@ -1,0 +1,6 @@
+{
+  "name": "Scale of Love - The Infinite Heart",
+  "description": "An interactive cosmic scale voyage comparing heights and sizes from your girlfriend to the universe, and the biggest thing in existence: your heart when talking to her.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

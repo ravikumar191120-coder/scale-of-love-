@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: #05010a;
+    color: #f8fafc;
+    overflow-x: hidden;
+    letter-spacing: -0.01em;
+  }
+
+  h1, h2, h3, .font-serif-cormorant {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    letter-spacing: -0.015em;
+  }
+
+  .font-body-inter {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  .font-mono-data {
+    font-family: 'JetBrains Mono', monospace;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@keyframes pulseSlow {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 1;
+    filter: drop-shadow(0 0 25px rgba(244, 63, 94, 0.7));
+  }
+}
+
+@keyframes heartbeat {
+  0% { transform: scale(1); }
+  14% { transform: scale(1.15); }
+  28% { transform: scale(1); }
+  42% { transform: scale(1.22); }
+  70% { transform: scale(1); }
+  100% { transform: scale(1); }
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(1deg);
+  }
+}
+
+@keyframes cosmicSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulseSlow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-heartbeat-active {
+  animation: heartbeat 1.3s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+}
+
+.animate-float-slow {
+  animation: floatSlow 6s ease-in-out infinite;
+}
+
+.animate-spin-cosmic {
+  animation: cosmicSpin 45s linear infinite;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #030712;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
